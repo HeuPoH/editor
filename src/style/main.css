@@ -1,0 +1,146 @@
+body {
+    background-color: #f8ffbe;
+}
+
+p {
+    margin: 0;
+    text-indent: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__title {
+    margin: 20px 0 10px 0;
+}
+
+.container__workspace {
+    box-shadow: 2px 2px 20px 0 #808080;
+    border: #808080 1px solid;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.container__navbar {
+    display: flex;
+    border-bottom: #808080 1px solid;
+    padding: 5px;
+}
+
+.container__btn {
+    cursor: pointer;
+}
+
+#bold {
+    font-weight: 600;
+}
+
+#italic {
+    font-style: italic;
+}
+
+#underlined {
+    text-decoration: underline;
+}
+
+#red {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+#green {
+    background-color: #008800;
+    color: #ffffff;
+}
+
+#blue {
+    background-color: #0000ff;
+    color: #ffffff;
+}
+
+.container__toggle {
+    display: flex;
+    margin-left: auto;
+
+}
+
+.toggle-button {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    margin: 0 0 0 5px;
+    background: #ffffff;
+    border: 2px solid #b6c4db;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.toggle-button:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 17px;
+    height: 17px;
+    background-color: #ff8c66;
+    border: 1px solid #808080;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.toggle-button:checked:after {
+    transform: translateX(calc(100% + 5px));
+    background-color: #8bff74;
+}
+
+.container__textarea {
+    border: none;
+    height: 500px;
+    width: 800px;
+    margin: 0 0 0 10px;
+    resize: none;
+}
+
+.container__textarea:focus {
+    border: none;
+    outline: none;
+}
+
+.container__text {
+    display: none;
+    width: 800px;
+    margin: 0 5px 0 10px;
+    min-height: 500px;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .container__textarea {
+        width: 600px;
+    }
+    .container__text {
+        width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container__textarea {
+        width: 300px;
+    }
+    .container__text {
+        width: 300px;
+    }
+    .container__navbar {
+        line-height: 1.5;
+    }
+}
