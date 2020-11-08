@@ -126,7 +126,7 @@ p {
 
 @media (max-width: 768px) {
     .container__textarea {
-        width: 600px;
+        width: 95%;
     }
     .container__text {
         width: 600px;
