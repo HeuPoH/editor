@@ -108,6 +108,7 @@ p {
     width: 800px;
     margin: 0 0 0 10px;
     resize: none;
+    background-color: #f8ffbe;
 }
 
 .container__textarea:focus {
@@ -126,7 +127,7 @@ p {
 
 @media (max-width: 768px) {
     .container__textarea {
-        width: 100%;
+        width: 600px
     }
     .container__text {
         width: 600px;
@@ -135,7 +136,7 @@ p {
 
 @media (max-width: 480px) {
     .container__textarea {
-        width: 95%;
+        width: 300px;
     }
     .container__text {
         width: 300px;
