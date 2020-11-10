@@ -11,8 +11,17 @@ import * as constants from "../constants.js";
 
 export function getAction(type, textareaId) {
     const textarea = document.getElementById(textareaId);
-    const startLength = textarea.selectionStart;
-    const endLength = textarea.selectionEnd;
+    let startLength = textarea.selectionStart;
+    let endLength = textarea.selectionEnd;
+
+    /**
+     * Если каретка стоит внутри слова, обернуть это слово в тег
+     */
+    if(startLength === endLength) {
+        startLength = textarea.value.lastIndexOf(' ', startLength) + 1;
+        endLength = textarea.value.indexOf(' ', endLength);
+        if(endLength < 0) endLength = textarea.value.length;
+    }
 
     return {
         type: tags[type],
